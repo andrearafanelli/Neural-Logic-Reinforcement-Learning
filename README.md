@@ -1,4 +1,8 @@
-# Neuro-Symbolic Reinforcement Learning
+<h1 align="center"> Neuro-Symbolic Reinforcement Learning 
+<div>
+<img src=https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white>
+<img src=https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge&logo=PyTorch>
+</h1>
 
 ## Observation 🔍
 
