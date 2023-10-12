@@ -3,7 +3,7 @@
 <img src=https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white>
 <img src=https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge&logo=PyTorch>
 </h1>
-
+<img src="images/agent training.gif" height="500" width="500">
 ## Observation 🔍
 
 The observation simulates a set of 40 laser proximity sensors (geometrically, they are treated as segments starting from the center of the robot which collide with the environment generating intersection points which are then given to the agent) and has the shape of an array of tuples each containing 3 informations:
@@ -83,11 +83,6 @@ The second rule faces the agent towards detected doors in direction D and moves 
 
 ## Training 🏃‍♂️
 <img src="images/algorithm.png" height="300" width="300">
-
-## Performances 📊
-
-<img src="images/agent training.gif" height="500" width="500">
-
 ----------------------------------------------------------------------------------
 
 ## Installation 🪛
