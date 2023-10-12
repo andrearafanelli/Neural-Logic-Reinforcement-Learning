@@ -7,7 +7,7 @@ import cv2
 
 from SLAMRobot import SLAMAgent
 from metrics import MetricsLogger
-from utils import Check_Collisions, Game_Object, Room, Agent, ExitException
+from utils.utils import Check_Collisions, Game_Object, Room, Agent, ExitException
 from datetime import datetime
 from pygame import Rect
 
@@ -357,27 +357,27 @@ class Training:
         self._frame_size = (int(self._env_width), int(self._env_height))
         self._screen = pygame.display.set_mode(self._frame_size)
         self._rooms = []
-        self._type_to_sprite = dict(hall=pygame.image.load('textures/hall_texture.png').convert_alpha(),
-                                    kitchen=pygame.image.load('textures/kitchen_texture.png').convert_alpha(),
-                                    bedroom=pygame.image.load('textures/bedroom_texture.png').convert_alpha(),
-                                    bathroom=pygame.image.load('textures/bathroom_texture.png').convert_alpha(),
-                                    door=pygame.image.load('textures/door_texture.png').convert_alpha(),
-                                    toilet=pygame.image.load('textures/toilet_texture.png').convert_alpha(),
-                                    shower=pygame.image.load('textures/shower_texture.png').convert_alpha(),
-                                    bed=pygame.image.load('textures/green_bed_texture.png').convert_alpha(),
-                                    bedside=pygame.image.load('textures/bedside_texture.png').convert_alpha(),
-                                    sofa=pygame.image.load('textures/sofa_texture.png').convert_alpha(),
-                                    hall_table=pygame.image.load('textures/hall_table_texture.png').convert_alpha(),
-                                    table=pygame.image.load('textures/table_texture.png').convert_alpha(),
-                                    chair=pygame.image.load('textures/chair_texture.png').convert_alpha(),
-                                    desk=pygame.image.load('textures/desk_texture.png').convert_alpha(),
-                                    sink=pygame.image.load('textures/sink_texture.png').convert_alpha(),
-                                    wardrobe=pygame.image.load('textures/wardrobe_texture.png').convert_alpha(),
-                                    cupboard=pygame.image.load('textures/wardrobe_texture.png').convert_alpha(),
-                                    floor=pygame.image.load('textures/floor_texture.png').convert_alpha(),
-                                    agent=pygame.image.load('textures/agent_texture_mockup.png').convert_alpha(),
+        self._type_to_sprite = dict(hall=pygame.image.load('../textures/hall_texture.png').convert_alpha(),
+                                    kitchen=pygame.image.load('../textures/kitchen_texture.png').convert_alpha(),
+                                    bedroom=pygame.image.load('../textures/bedroom_texture.png').convert_alpha(),
+                                    bathroom=pygame.image.load('../textures/bathroom_texture.png').convert_alpha(),
+                                    door=pygame.image.load('../textures/door_texture.png').convert_alpha(),
+                                    toilet=pygame.image.load('../textures/toilet_texture.png').convert_alpha(),
+                                    shower=pygame.image.load('../textures/shower_texture.png').convert_alpha(),
+                                    bed=pygame.image.load('../textures/green_bed_texture.png').convert_alpha(),
+                                    bedside=pygame.image.load('../textures/bedside_texture.png').convert_alpha(),
+                                    sofa=pygame.image.load('../textures/sofa_texture.png').convert_alpha(),
+                                    hall_table=pygame.image.load('../textures/hall_table_texture.png').convert_alpha(),
+                                    table=pygame.image.load('../textures/table_texture.png').convert_alpha(),
+                                    chair=pygame.image.load('../textures/chair_texture.png').convert_alpha(),
+                                    desk=pygame.image.load('../textures/desk_texture.png').convert_alpha(),
+                                    sink=pygame.image.load('../textures/sink_texture.png').convert_alpha(),
+                                    wardrobe=pygame.image.load('../textures/wardrobe_texture.png').convert_alpha(),
+                                    cupboard=pygame.image.load('../textures/wardrobe_texture.png').convert_alpha(),
+                                    floor=pygame.image.load('../textures/floor_texture.png').convert_alpha(),
+                                    agent=pygame.image.load('../textures/agent_texture_mockup.png').convert_alpha(),
                                     objective=pygame.image.load(
-                                        'textures/objective_texture_mockup.png').convert_alpha())
+                                        '../textures/objective_texture_mockup.png').convert_alpha())
 
         floor_sprite = pygame.sprite.Sprite()
         floor_sprite.image = pygame.transform.scale(self._type_to_sprite['floor'],

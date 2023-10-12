@@ -1,13 +1,9 @@
-"""
-    Reinforcement Learning of an Agent in Procedural Environments
-    https://github.com/AAAI-DISIM-UnivAQ/bd-procedural-env-deep-learning
-"""
 
 from guizero import App, ListBox, PushButton, Box, Text, info, Slider, CheckBox
-from simulator import Environment
+from utils.simulator import Environment
 from os import listdir
 from os.path import isfile, join
-from training import Training
+from training.training import Training
 
 
 class Guizero:
@@ -166,8 +162,6 @@ class Guizero:
         self._environment._env_width = self._env_width
         self._environment._env_height = self._env_height
         self._environment._multiplier = self._multiplier
-
-        # self._environment.draw_model()
         self._environment.display_environment(self.sliderBAR.value, self.sliderBR.value, self.sliderKI.value,
                                               self.sliderHA.value)
 

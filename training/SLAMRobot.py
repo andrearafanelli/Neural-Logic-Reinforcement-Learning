@@ -3,8 +3,7 @@ import numpy as np
 from collections import deque
 import random
 import pygame
-from utils import ExitException
-from math import atan2
+from utils.utils import ExitException
 
 EPOCHS = 1
 

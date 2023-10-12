@@ -3,3 +3,4 @@ environments/*.json
 test
 .ipynb_checkpoints
 **/.ipynb_checkpoints
+environments/*.png
