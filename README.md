@@ -7,7 +7,7 @@ The observation simulates a set of 40 laser proximity sensors (geometrically, th
 - Distance: the distance between the agent and the eventual point of intersection found (a high number is set instead if nothing was hit);
 - isObject: boolean flag telling the agent whether the eventual point hit an objective or not (assumes the agent can recognize objectives);
 
-## Actions 🏃
+## Actions 🕹️
 
 There are 3 possible actions: rotate right by 45°, rotate left by 45° or move in the faced direction.
 
@@ -77,5 +77,43 @@ The second rule faces the agent towards detected doors in direction D and moves 
 - enable strategic room navigation by encoding the concept of doors.
 - prevent wandering behavior before grasping spatial logic.
 
-## Training
+## Training 🏃‍♂️
 <img src="images/algorithm.png" height="300" width="300">
+
+## Performances 📊
+
+<img src="images/agent training.gif" height="500" width="500">
+
+----------------------------------------------------------------------------------
+
+## Installation 🪛
+
+- make sure you have clean python paths, taking care of the `.local` directory as well.
+- make sure to delete all `__pycache__` and other temporary files from your project.
+- make sure you do not have conflicting conda installations.
+- clone the repo.
+- start a terminal inside the cloned directory.
+- ` curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-latest-Linux-x86_64.sh `
+- ` bash Miniconda3-latest-Linux-x86_64.sh `
+- ` conda create --name tf python=3.9 `
+- ` conda deactivate `
+**Restart the terminal**
+- ` conda activate tf  `
+- ` conda install -c conda-forge cudatoolkit=11.8.0 `
+- ` pip install nvidia-cudnn-cu11==8.6.0.163 `
+- ` CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)")) `
+- ` export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib `
+- ` mkdir -p $CONDA_PREFIX/etc/conda/activate.d `
+- ` echo 'CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh`
+- ` echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh `
+- ` pip install --upgrade pip `
+- ` pip install tensorflow==2.12.* `
+- ` python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))" `
+- ` rm -rf Miniconda3-latest-Linux-x86_64.sh `
+- ` conda install -c conda-forge opencv `
+- ` pip install -r requirements.txt `
+
+## Acknowledgements
+
+The code in this repository is adapted from the public implementation available at:
+https://github.com/AAAI-DISIM-UnivAQ/bd-procedural-env-deep-learning/tree/master
