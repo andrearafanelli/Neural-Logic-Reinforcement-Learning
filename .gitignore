@@ -1,6 +1,6 @@
 __pycache__
 environments/*.json
+textures/*.png
 test
 .ipynb_checkpoints
 **/.ipynb_checkpoints
-textures/*.png
