@@ -78,4 +78,4 @@ The second rule faces the agent towards detected doors in direction D and moves 
 - prevent wandering behavior before grasping spatial logic.
 
 ## Training
-<img src="training/algorithm" height="300" width="300">
+<img src="images/algorithm.png" height="300" width="300">
