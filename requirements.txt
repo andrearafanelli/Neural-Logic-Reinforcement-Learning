@@ -1,0 +1,10 @@
+setuptools~=67.6.1
+keras
+pyswip~=0.2.10
+swiplserver
+pygame~=2.2.0
+guizero~=1.4.0
+numpy~=1.23.5
+pandas
+tensorflow~=2.12.0
+cuda-python
