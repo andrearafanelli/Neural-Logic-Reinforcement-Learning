@@ -97,6 +97,7 @@ The second rule faces the agent towards detected doors in direction D and moves 
 - ` bash Miniconda3-latest-Linux-x86_64.sh `
 - ` conda create --name tf python=3.9 `
 - ` conda deactivate `
+  
 **Restart the terminal**
 - ` conda activate tf  `
 - ` conda install -c conda-forge cudatoolkit=11.8.0 `
