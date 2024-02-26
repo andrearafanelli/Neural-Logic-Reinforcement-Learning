@@ -4,7 +4,49 @@
 <img src=https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge&logo=PyTorch>
 </h1>
 <img src="images/agent training.gif" height="500" width="500">
-  
+
+
+### Reference paper
+
+> Andrea Rafanelli, Stefania Costantini, Giovanni De Gasperis. "[Experimenting an approach to Neuro-Symbolic RL]", in: IPS-RCRA-SPIRIT@AI*IA 2023.
+
+Bibtex: 
+```bibtex
+@inproceedings{DBLP:conf/aiia/RafanelliCG23,
+  author       = {Andrea Rafanelli and
+                  Stefania Costantini and
+                  Giovanni De Gasperis},
+  editor       = {Riccardo De Benedictis and
+                  Matteo Castiglioni and
+                  Diodato Ferraioli and
+                  Vadim Malvone and
+                  Marco Maratea and
+                  Enrico Scala and
+                  Luciano Serafini and
+                  Ivan Serina and
+                  Elisa Tosello and
+                  Alessandro Umbrico and
+                  Mauro Vallati},
+  title        = {Experimenting an Approach to Neuro-Symbolic {RL}},
+  booktitle    = {Proceedings of the the Italian Workshop on Planning and Scheduling,
+                  {RCRA} Workshop on Experimental evaluation of algorithms for solving
+                  problems with combinatorial explosion, and {SPIRIT} Workshop on Strategies,
+                  Prediction, Interaction, and Reasoning in Italy {(IPS-RCRA-SPIRIT}
+                  2023) co-located with 22nd International Conference of the Italian
+                  Association for Artificial Intelligence AIxIA 2023, November 7-9th,
+                  2023, Rome, Italy},
+  series       = {{CEUR} Workshop Proceedings},
+  volume       = {3585},
+  publisher    = {CEUR-WS.org},
+  year         = {2023},
+  url          = {https://ceur-ws.org/Vol-3585/paper9\_RCRA8.pdf},
+  timestamp    = {Tue, 02 Jan 2024 17:44:44 +0100},
+  biburl       = {https://dblp.org/rec/conf/aiia/RafanelliCG23.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+```
+
+-------------------------------------------------------------------------------------
 ## Observation 🔍
 
 The observation simulates a set of 40 laser proximity sensors (geometrically, they are treated as segments starting from the center of the robot which collide with the environment generating intersection points which are then given to the agent) and has the shape of an array of tuples each containing 3 informations:
